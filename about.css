@@ -361,3 +361,15 @@ body{
   }
 }
 
+@media (max-width: 600px) {
+  .footer-nav {
+    flex-direction: column; /* العناصر تصير تحت بعض */
+    align-items: center;
+    gap: 20px;
+  }
+
+  .footer-link {
+    text-align: center;
+  }
+}
+
