@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="MprPage.css">
+    <title>Sport Watches</title>
+</head>
+<body style="
+background: linear-gradient(to right bottom,
+    #2b6081,
+    #14425f,
+    #030f16 ,
+    #03111e,
+    #031f30,
+    #3065a5,
+    #2e4968
+   );
+    background-size: cover;
+    background-attachment: fixed;
+">
+ <header class="navbar">
+
+  <!-- الجهة اليمنى: شعار + زر الموبايل -->
+  <div class="nav-right-group">
+      <div class="logo">TIC<span>TAC</span></div>
+      <div class="menu-icon">☰</div>
+  </div>
+
+  <!-- الروابط -->
+  <nav class="nav-links">
+      <a href="index.html">الرئيسية</a>
+
+      <!-- Dropdown المنتجات -->
+      <div class="dropdown">
+          <a href="javascript:void(0)" class="dropbtn">المنتجات ▾</a>
+          <div class="dropdown-content">
+              <a href="MprPage.html?type=modern">ساعات حديثة</a>
+              <a href="Sp.html?type=sport">ساعات رياضية</a>
+          </div>
+      </div>
+
+     <a href="aboutUs.html">من نحن</a>
+
+  </nav>
+
+  <!-- الأيقونات -->
+  <div class="nav-left-icons">
+      <div class="icon-group">
+          <div class="icon-item">♡ <span class="badge">8</span></div>
+          <div class="icon-item" onclick="goLogin()">👤</div>
+          <div class="icon-item" onclick="goCart()">🛒 <span class="badge">3</span></div>
+      </div>
+  </div>
+
+</header>
+
+<section class="page">
+  <h1>ساعات حديثة</h1>
+<div class="filter-buttons">
+    <div class="filter-buttons">
+    <button onclick="filterSelection('all')" class="btn">الكل</button>
+    <button onclick="filterSelection('men')" class="btn">رجالي</button>
+     <button onclick="filterSelection('women')" class="btn">نسائي</button> 
+    </div>
+</div>
+  <div class="grid">
+    <a href="#product1" class="card-link">
+    <div class="card" data-category="women"
+         data-battery="محرك Co-Axial دقيق" 
+         data-water="فولاذ وذهب وردي 18 قيراط "
+         data-heart="زجاج ياقوتي مقاوم للخدش"
+         data-gps="جلد فاخر بتصميم قشور التمساح" 
+         onmouseenter="showDetails(this)" 
+         onmouseleave="closeDetails()">
+          <div class="img-box">    
+              <img src="ModernImages/omega-de-ville-prestige-co-axial-master-chronometer-34-mm-43423342055001.avif">
+          </div>
+      <h3>De Ville Prestige</h3>
+      <span>€299.00</span>
+    </div>
+</a>
+<a href="#product2" class="card-link">
+    <div class="card" data-category="men"
+         data-battery="احتياطي طاقة 55 ساعة" 
+         data-water="فولاذ مقاوم للصدأ ومطاط"
+         data-heart="صمام هروب الهيليوم الاحترافي" 
+         data-gps="حلقة سيراميك دوارة أحادية الاتجاه للغوص"
+         onmouseenter="showDetails(this)" 
+         onmouseleave="closeDetails()">
+         <div class="img-box">
+      <img src="ModernImages/omega-seamaster-diver-300m-co-axial-master-chronometer-42-mm-21032422001003-df9d2f.avif">
+    </div>
+      <h3>Seamaster Diver</h3>
+      <span>€249.00</span>
+    </div>
+</a>
+
+    <a href="#product3" class="card-link">
+    <div class="card" data-category="women"
+         data-battery="حركة كوارتز سويسرية دقيقة طويلة الأمد" 
+         data-water="علبة وسوار من الفولاذ المقاوم للصدأ والذهب" 
+         data-heart="مقاومة لخدوش الاستخدام اليومي بفضل الياقوت" 
+         data-gps="إطار مصقول ناعم يعكس الأناقة الكلاسيكية"
+         onmouseenter="showDetails(this)" 
+         onmouseleave="closeDetails()">
+         <div class="img-box">
+      <img src="ModernImages/tisoot-women-pink+silver-removebg-preview.png">
+      </div>
+      <h3>De Ville Prestige</h3>
+      <span>€299.00</span>
+    </div></a>
+
+<a href="#product4" class="card-link">
+    <div class="card" data-category="women"
+         data-battery="بطارية عالية الكفاءة تدوم لعدة سنوات" 
+         data-water="سوار Tubogas المرن من الفولاذ والذهب الوردي" 
+         data-heart="تصميم ملتف يوفر ثباتاً وحماية فائقة لليد" 
+         data-gps="ميناء مرصع بالماس على شكل رأس الثعبان الأيقوني"
+         onmouseenter="showDetails(this)" 
+         onmouseleave="closeDetails()">
+         <div class="img-box">
+      <img src="ModernImages/bulgary copy.avif">
+      </div>
+      <h3>Serpenti Tubogas Watch</h3>
+      <span>€700.00</span>
+    </div>
+    </a>
+    <a href="#product5" class="card-link">
+    <div class="card" data-category="women"
+         data-battery="حركة أوتوماتيكية مع احتياطي طاقة يصل لـ 80 ساعة" 
+         data-water="هيكل وسوار مصنوع من معدن التيتانيوم الخفيف والقوي" 
+         data-heart="مقاومة عالية للصدمات وضغط الماء حتى عمق 100 متر" 
+         data-gps="إطار ناعم مدمج مع الهيكل بتصميم رياضي من السبعينات"
+         onmouseenter="showDetails(this)" 
+         onmouseleave="closeDetails()">
+         <div class="img-box">
+      <img src="ModernImages/tissot-watch-copy-removebg-preview.png">
+      </div>
+      <h3>Tissot PRX Titanium</h3>
+      <span>€955.00</span>
+    </div>
+    </a>
+    <a href="#product6" class="card-link">
+    <div class="card" data-category="women"
+   data-battery="محرك كوارتز سويسري مخصص للساعات الفاخرة" 
+         data-water="ذهب أصفر عيار 18 قيراط مع تفاصيل محفورة بدقة" 
+         data-heart="زجاج ياقوتي مضاد للانعكاس لرؤية واضحة تحت الضوء" 
+         data-gps="إطار من الذهب المرصع بالكامل بأحجار الماس المختارة"
+         onmouseenter="showDetails(this)" 
+         onmouseleave="closeDetails()">
+         <div class="img-box">
+      <img src="ModernImages/bulgary_best-removebg-preview.png">
+      </div>
+      <h3>Serpenti Spiga Watch</h3>
+      <span>€1200.00</span>
+    </div></a>
+    <a href="#product7" class="card-link">
+    <div class="card"data-category="men" 
+    data-battery="بطارية طويلة الأمد مع مؤشر لنهاية عمر البطارية (EOL)" 
+         data-water="علبة من الفولاذ المقاوم للصدأ مع حزام جلد طبيعي فاخر" 
+         data-heart="زجاج ياقوتي (Sapphire) مقاوم جداً للخدوش" 
+         data-gps="إطار كلاسيكي رفيع يبرز جمال الميناء الأبيض"
+         onmouseenter="showDetails(this)" 
+         onmouseleave="closeDetails()">
+         <div class="img-box">
+      <img src="ModernImages/copy-removebg-preview.png">
+      </div>
+      <h3>Tissot Classic Dream</h3>
+      <span>€650.00</span>
+    </div></a>
+    <a href="#product8" class="card-link">
+<div class="card" data-category="men"
+data-battery="محرك كوارتز رياضي دقيق يدعم وظائف التوقيت" 
+         data-water="فولاذ كامل مصقول (Full Stainless Steel)" 
+         data-heart="مقاومة للصدمات والماء حتى عمق 100 متر" 
+         data-gps="إطار رياضي مدرج (Tachymeter) لحساب السرعة والوقت"
+         onmouseenter="showDetails(this)" 
+         onmouseleave="closeDetails()">
+     <div class="img-box"> 
+      <img src="ModernImages/سيكتور رجالي copy.png">
+      </div>
+      <h3>Sector 450 Chronograph</h3>
+      <span>€1000.00</span>
+    </div>
+    </a>
+    <a href="#product9" class="card-link">
+    <div class="card"data-category="men" 
+    data-battery="حركة كوارتز سويسرية يعتمد عليها في الاستخدام اليومي" 
+         data-water="سوار Jubilee من الفولاذ بتصميم متداخل وأنيق" 
+         data-heart="إحكام غلق التاج لتوفير حماية إضافية ضد تسرب الغبار والماء" 
+         data-gps="إطار(Fluted Bezel) يعكس الضوء بجمالية فريدة"
+         onmouseenter="showDetails(this)" 
+         onmouseleave="closeDetails()">
+         <div class="img-box">
+      <img src="ModernImages/Screenshot_2025-12-24_203922-removebg-preview(1).png">
+         </div>
+      <h3>Sector 240 Classic</h3>
+      <span>€700.00</span>
+    </div>
+    </a>
+    </div>
+</section>
+
+<div id="sidePanel" class="side-panel">
+    <div class="panel-content">
+        <img id="panelImg" src="" alt="">
+        <h2 id="panelTitle"></h2>
+        <p id="panelSubtitle"></p>
+        <hr>
+<div class="details-text">
+    <h4>المواصفات التقنية</h4> <ul>
+        <li id="pBattery"></li>
+        <li id="pWater"></li>
+        <li id="pHeart"></li>
+        <li id="pGPS"></li>
+    </ul>
+</div>
+    </div>
+</div>
+<div id="product1" class="modal-css">
+    <div class="modal-content">
+        <a href="#" class="close-btn">&times;</a>
+        
+        <div class="modal-layout">
+            <div class="gallery-section">
+                <img src="ModernImages/Precision-PN07-PDP-large.avif" class="main-img">
+                <!-- <div class="thumbs">
+                    <img src="sportsImages/side1.png">
+                    <img src="sportsImages/side2.png">
+                </div> -->
+            </div>
+
+<div class="info-section">
+                <h2>De Ville Prestige</h2>
+                <p class="edition-text"></p>
+                <h3>€299.00</h3>
+                <div class="desc">
+                    <p>
+                        <br>
+                        <dl>الوصف</dl>
+                        <dt>تصميم كلاسيكي أنيق يناسب اللبس الرسمي واليومي.</dt>
+                      <br><dl>المميزات</dl>
+                    <dt>حركة عالية الدقة ومضادة للمغناطيسية مع مزيج من الفولاذ والذهب يعطي لمسة فاخرة، و مؤشر الماس يزيد من الفخامة.</dt>                    </p>
+                </div>
+                <button class="cart-btn">أضف إلى السلة</button>
+            </div>
+        </div>
+         
+    </div>
+</div>
+<div id="product2" class="modal-css">
+    <div class="modal-content">
+        <a href="#" class="close-btn">&times;</a>
+        
+        <div class="modal-layout">
+            <div class="gallery-section">
+                <img src="ModernImages/Omega-SeamasterDiver300m-210.32.42.20.01.003-388450-251107-143738191-removebg-preview.png" class="main-img">
+               
+            </div>
+
+            <div class="info-section">
+                <h2>Seamaster Diver</h2>
+                <p class="edition-text"></p>
+                <h3>€240.00</h3>
+                <div class="desc">
+            <p> 
+                <br>
+                  <dt>الوصف</dt>
+                  <dd>ساعة الغوص الشهيرة من أوميجا، مقاومة للماء حتى 300 متر / 30 بار — مناسبة للغوص الحر والمهنيين تحت الماء.</dd>
+                  <br><dt>المميزات</dt>
+                  <dd>حلقة إطار دوّارة أحادية الاتجاه لمراقبة وقت الغوص مع صمام هروب الهيليوم (Helium Escape Valve) في بعض الإصدارات — مفيد للتعرّض لضغط عالي تحت الماء، و ذات أزرار وسنن مقاومة للماء عالي.</dd>
+                  </p>
+                </div>
+                <button class="cart-btn">أضف إلى السلة</button>
+            </div>
+        </div>
+         
+    </div>
+</div>
+<div id="product3" class="modal-css">
+    <div class="modal-content">
+        <a href="#" class="close-btn">&times;</a>
+        
+        <div class="modal-layout">
+            <div class="gallery-section">
+                <img src="ModernImages/d2fbc2d5-8fc1-4bbe-8c5a-72ddfd6035b0_T151-822-22-111-00_DETAIL-1.webp" class="main-img">
+                <!-- <div class="thumbs">
+                    <img src="sportsImages/side1.png">
+                    <img src="sportsImages/side2.png">
+                </div> -->
+            </div>
+
+            <div class="info-section">
+                <h2>De Ville Prestige</h2>
+                <p class="edition-text"></p>
+                <h3>€299.00</h3>
+                <div class="desc">
+                     <p>
+                        <br>
+                  <dt>الوصف</dt>
+                  <dd>ساعة تجمع بين البساطة السويسرية والفخامة العصرية لتناسب كل وقت</dd>
+                  <br>   
+                  <dt>المميزات</dt>
+                  
+                  <dd> تتميز بميناء لؤلؤي ونقوش دقيقة تضفي لمسة من الرقي على معصمك و مقاومة لخدوش الاستخدام اليومي بفضل الياقوت</dd>
+                  </p>
+                </div>
+                <button class="cart-btn">أضف إلى السلة</button>
+            </div>
+        </div>
+         
+    </div>
+</div>
+<div id="product4" class="modal-css">
+    <div class="modal-content">
+        <a href="#" class="close-btn">&times;</a>
+        
+        <div class="modal-layout">
+            <div class="gallery-section">
+                <img src="ModernImages/1656431.avif" class="main-img">
+                <!-- <div class="thumbs">
+                    <img src="sportsImages/side1.png">
+                    <img src="sportsImages/side2.png">
+                </div> -->
+            </div>
+
+<div class="info-section">
+                <h2>Serpenti Tubogas Watch</h2>
+                <p class="edition-text"></p>
+                <h3>€700.00</h3>
+                <div class="desc">
+                    <p>
+                        <br>
+                    <dt>الوصف </dt>
+                    <dd>قطعة فنية فريدة تلتف حول المعصم لتجسد القوة والجمال الأنثوي</dd>
+                    <br>
+                    <dt>المميزات</dt>
+                    <dd>تصميم السوار المرن لا يحتاج إلى مشبك، مما يوفر راحة تامة طوال اليوم مع تصميم ملفت يوفر نباتا و حماية فائقة لليد</dd>
+
+                    </p>
+                </div>
+                <button class="cart-btn">أضف إلى السلة</button>
+            </div>
+        </div>
+         
+    </div>
+</div>
+<div id="product5" class="modal-css">
+    <div class="modal-content">
+        <a href="#" class="close-btn">&times;</a>
+        
+        <div class="modal-layout">
+            <div class="gallery-section">
+                <img src="ModernImages/318e2abb-41a0-41fa-acac-75c3ebfa6d04_T137-807-44-061-00_DETAIL-1.webp" class="main-img">
+               
+            </div>
+
+            <div class="info-section">
+                <h2>Tissot PRX Titanium</h2>
+                <p class="edition-text"></p>
+                <h3>€955.00</h3>
+                <div class="desc">
+                    <p>
+                        <br>
+                        <dt>الوصف </dt>
+                    <dd>الخيار الأمثل للرجل العصري الذي يبحث عن ساعة خفيفة الوزن وعالية الأداء</dd><br>
+                    <dt>المميزات</dt>
+                    <dd>التيتانيوم يجعلها أخف من الفولاذ بكثير، مع مقاومة ممتازة للتآكل والحساسية</dd>
+
+                    </p>
+                </div>
+                <button class="cart-btn">أضف إلى السلة</button>
+            </div>
+        </div>
+         
+    </div>
+</div>
+<div id="product6" class="modal-css">
+    <div class="modal-content">
+        <a href="#" class="close-btn">&times;</a>
+        
+        <div class="modal-layout">
+            <div class="gallery-section">
+                <img src="ModernImages/1447955.avif" class="main-img">
+              
+            </div>
+
+            <div class="info-section">
+                <h2>Serpenti Spiga Watch</h2>
+                <p class="edition-text"></p>
+                <h3>€1200.00</h3>
+                <div class="desc">
+                    <p>
+                        <br>
+                        <dt>الوصف</dt>
+                        <dd>قمة الفخامة من بولغري، مستوحاة من سنابل القمح بتصميم ذهبي خلاب</dd>
+                        <br>
+                        <dt>المميزات</dt>
+                        <dd>سوار مزدوج الالتفاف يمنحك مظهراً ملكياً يخطف الأنظار في المناسبات الكبرى</dd>
+                    </p>
+                </div>
+                <button class="cart-btn">أضف إلى السلة</button>
+            </div>
+        </div>
+         
+    </div>
+</div>
+<div id="product7" class="modal-css">
+    <div class="modal-content">
+        <a href="#" class="close-btn">&times;</a>
+        
+        <div class="modal-layout">
+            <div class="gallery-section">
+                <img src="ModernImages/bf348c07-0ffa-434f-9e98-6103fbfa33de_T129_410_16_013_00_WRIST.webp" class="main-img">
+               
+            </div>
+
+<div class="info-section">
+                <h2>Tissot Classic Dream</h2>
+                <p class="edition-text"></p>
+                <h3>€700.00</h3>
+                <div class="desc">
+                    <p>
+                        <br>
+                      <dt>الوصف</dt>
+                        <dd>ساعة سويسرية كلاسيكية تجسد الأناقة الدائمة، مثالية للمناسبات الرسمية والعمل</dd>
+                        <br>
+                        <dt>المميزات</dt>
+                        <dd>أرقام رومانية دقيقة وتصميم نحيف يجعلها مريحة جداً على المعصم طوال اليوم</dd>                      
+                    </p>
+                </div>
+                <button class="cart-btn">أضف إلى السلة</button>
+            </div>
+        </div>
+         
+    </div>
+</div>
+<div id="product8" class="modal-css">
+    <div class="modal-content">
+        <a href="#" class="close-btn">&times;</a>
+        
+        <div class="modal-layout">
+            <div class="gallery-section">
+                <img src="ModernImages/Screenshot_2025-12-25_155223-removebg-preview.png" class="main-img">
+               
+            </div>
+
+            <div class="info-section">
+                <h2>Sector 450 Chronograph</h2>
+                <p class="edition-text"></p>
+                <h3>€1000.00</h3>
+                <div class="desc">
+                    <p>
+                        <br>
+                        <dt>الوصف</dt>
+                        <dd>ساعة رياضية جريئة مصممة للرجل الذي يعشق التحدي والسرعة</dd>
+                        <br>
+                        <dt>المميزات</dt>
+                        <dd>وظيفة الكرونوغراف لقياس الوقت بدقة متناهية مع عقارب مضيئة في الظلام</dd>
+                    </p>
+                </div>
+                <button class="cart-btn">أضف إلى السلة</button>
+            </div>
+        </div>
+         
+    </div>
+</div>
+<div id="product9" class="modal-css">
+    <div class="modal-content">
+        <a href="#" class="close-btn">&times;</a>
+        
+        <div class="modal-layout">
+            <div class="gallery-section">
+                <img src="ModernImages/5-orologio-sector-240-r3253240014_v5n2d7-removebg-preview(1).png" class="main-img">
+              
+            </div>
+
+            <div class="info-section">
+                <h2>Sector 240 Classic</h2>
+                <p class="edition-text"></p>
+                <h3>€700.00</h3>
+                <div class="desc">
+                    <p>
+                        <br>
+                        <dl>الوصف</dl>
+                        <dt>مزيج مثالي بين التصميم الرياضي واللمسة الكلاسيكية، تناسب جميع الإطلالات</dt>
+                      <br><dl>المميزات</dl>
+                    <dt>ميناء فضي "Sunray" يتغير لونه مع الضوء مع نافذة لعرض التاريخ عند الرقم 3</dt>
+                    </p>
+                </div>
+                <button class="cart-btn">أضف إلى ألسلة</button>
+            </div>
+        </div>
+         
+    </div>
+</div>
+<script>
+    function showDetails(element) {
+    // جلب النصوص والصورة
+    document.getElementById('panelImg').src = element.querySelector('img').src;
+    document.getElementById('panelTitle').innerText = element.querySelector('h3').innerText;
+    document.getElementById('panelSubtitle').innerText = element.querySelector('span').innerText;
+
+    // جلب المواصفات (تأكدي أن المسميات مطابقة للـ data- في الأعلى)
+    const battery = element.getAttribute('data-battery');
+    const water = element.getAttribute('data-water');
+    const heart = element.getAttribute('data-heart');
+    const gps = element.getAttribute('data-gps');
+
+// تعبئة الـ <li> في الـ HTML
+    document.getElementById('pBattery').innerHTML = "🔋 الطاقة: " + battery;
+    document.getElementById('pWater').innerHTML = "✨ المواد: " + water;
+    document.getElementById('pHeart').innerHTML = "🛡️ الحماية: " + heart;
+    document.getElementById('pGPS').innerHTML = "⚓ الإطار: " + gps;
+
+    document.getElementById('sidePanel').classList.add('active');
+}
+function filterSelection(category) {
+    let cards = document.querySelectorAll(".card"); // جلب كل الكاردات
+    
+    cards.forEach(card => {
+        let cardCategory = card.getAttribute("data-category");
+        let parentLink = card.closest('a'); // الوصول للرابط الأب <a>
+
+        if (category === "all" || cardCategory === category) {
+            parentLink.style.display = "block"; // إظهار إذا كان مطابقاً أو اخترنا الكل
+        } else {
+            parentLink.style.display = "none";  // إخفاء إذا لم يكن مطابقاً
+        }
+    });
+}
+
+    function closeDetails() {
+        // إخفاء اللوحة عند ابتعاد الماوس
+        document.getElementById('sidePanel').classList.remove('active');
+    }
+</script>
+<footer class="footer">
+  <!-- العنوان الكبير -->
+  <div class="footer-header">
+    <h2>TICTAC</h2>
+  </div>
+
+  <!-- أسماء العناصر في صف واحد -->
+  <div class="footer-nav">
+    <div class="footer-link">
+      <h3>معلومات</h3>
+      <ul>
+        <li><a href="aboutUs.html">من نحن</a></li>
+        <li><a href="aboutUs.html">أسئلة متكررة</a></li>
+        <li><a href="aboutUs.html">إتصل بنا</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-link">
+      <h3>الشروط والسياسات</h3>
+      <ul>
+        <li><a href="#">شروط الاستخدام</a></li>
+        <li><a href="#">سياسة الخصوصية</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-link">
+      <h3>العنوان</h3>
+      <p>بن عاشور - طرابلس</p>
+    </div>
+
+    <div class="footer-link">
+      <h3>معلومات الوصول</h3>
+      <ul>
+        <li><a href="#">Tictac2025@gmail.com</a></li>
+        <li><a href="#">0915044592</a></li>
+        <li><a href="#">0925044592</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- نص أسفل الفوتر -->
+  <div class="footer-bottom">
+    © 2025 جميع الحقوق محفوظة
+  </div>
+</footer>
+ <!-- ملف الجافاسكريبت -->
+    <script src="hov.js"></script>
+</body>
+</html>

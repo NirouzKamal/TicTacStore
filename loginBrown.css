@@ -1,0 +1,524 @@
+:root{
+background: linear-gradient(to right bottom,
+     #523712, #634f35, #1c0f00, #0a0601, #0a0601fa, #6f5534, #4a3a25);  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}/* ========================================
+   RESET STYLES
+======================================== */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: "Times New Roman", sans-serif;
+}
+
+/* ========================================
+   BODY
+======================================== */
+body{
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  direction: ltr;
+   background: radial-gradient(circle at top, var(--mid), var(--dark));
+
+  /* backdrop-filter: blur(15px); */
+  /* border: 1px solid rgba(150, 110, 80, 0.2); */
+  /* box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4); */
+  /* border-radius: 20px; */
+  color: #f0e6dc;
+  
+}
+
+/* ========================================
+   NAVBAR
+======================================== */
+/*       Navbar         */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-top: 30px;
+    padding-left: 35px;
+    padding-right: 40px;
+    font-size: 21px;
+
+}
+
+.nav-right-group {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex: 1;
+    padding-top: 5px;
+}
+
+.nav-left-icons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+    flex: 1;
+    padding-top: 15px;
+
+}
+
+.nav-links {
+    /* font-size: 150px; */
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex: 2;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: rgba(255,255,255,0.7);
+    font-size: 13px;
+    font-weight: 600;
+    position: relative;
+    font-size: 20px;
+    padding-top: 15px;
+
+}
+
+.nav-links a:hover {
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 50%;
+   background-color: #ffb347; 
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* الأيقونات والشعاع */
+.icon-group {
+    display: flex;
+    gap: 15px;
+    color: white;
+    font-size: 18px;
+}
+
+.icon-item {
+    position: relative;
+    cursor: pointer;
+    overflow: visible;
+    font-size: 20px;
+}
+
+.icon-item::before {
+    content: "";
+    position: absolute;
+    top: -18px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 45px;
+    background: radial-gradient(
+        ellipse at top,
+        rgba(255, 179, 71, 0.7),
+        rgba(255, 179, 71, 0.2),
+        transparent 70%
+    );
+    opacity: 0;
+    filter: blur(4px);
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.icon-item:hover::before {
+    opacity: 1;
+}
+
+.icon-item:hover {
+    transform: translateY(-1px) scale(1.08);
+    text-shadow: 0 0 12px rgba(255,255,255,0.6);
+}
+.badge {
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    background: white;
+    color: black;
+    font-size: 9px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+.logo { 
+    color: #ffffff; 
+    font-weight: 700; 
+    font-size: 20px; 
+    letter-spacing: 3px;
+}
+
+.nav-logo span { 
+     color: #9e5e2e; 
+    transition: 0.3s;
+}
+
+.menu-icon {
+    color: #ffffff; 
+     cursor: pointer;
+}
+
+/* .logo span { 
+    
+      background: radial-gradient(
+        ellipse at top,
+        rgba(255, 179, 71, 0.7),
+        rgba(255, 179, 71, 0.2),
+        transparent 70%
+    );
+} */
+
+
+/* ========================================
+   WRAPPER / CARDS CONTAINER
+======================================== */
+.cards{
+  width:100%;
+  display:flex;
+  justify-content:center;
+  margin-top:60px;
+  margin-bottom:40px;
+}
+
+/* ========================================
+   MAIN CARD (AUTH CARD)
+======================================== */
+.auth-card{
+  width:900px;
+  height:500px;
+  display:flex;
+  border-radius:20px;
+  position:relative;
+  overflow:hidden;
+  background:#000000;
+  opacity:0.9;
+  box-shadow:0 30px 80px rgba(0,0,0,.5);
+}
+
+/* Animated border */
+.auth-card::before{
+  content:"";
+  position:absolute;
+  inset:-4px;
+  background:linear-gradient(90deg, #a17550, #6d4322, #1c0f00);
+  background-size:300% 300%;
+  animation:borderMove 6s linear infinite;
+  z-index:-2;
+}
+
+/* Inner overlay */
+.auth-card::after{
+  content:"";
+  position:absolute;
+  inset:4px;
+  background: #000;
+  border-radius:16px;
+  z-index:-1;
+}
+
+/* Border animation keyframes */
+@keyframes borderMove{
+  0%{ background-position:0% 50%; }
+  100%{ background-position:300% 50%; }
+}
+
+/* ========================================
+   LEFT SIDE - SHOWCASE
+======================================== */
+.showcase{
+  width:50%;
+  background: linear-gradient(to bottom, rgba(0,0,0,.3), rgba(0,0,0,.7)),
+              url("images/2d3babb98b4f9838ad429bb95b9ec129.jpg") center/cover no-repeat;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:flex-end;
+  padding-bottom:40px;
+  color:#ffd186;
+}
+
+.showcase img{
+  width:400px;
+  height:450px;
+  padding-top:20px;
+  filter: drop-shadow(0 0 25px #a17550);
+}
+
+.showcase h3{
+  margin-top:20px;
+  letter-spacing:2px;
+  padding-bottom:10px;
+}
+
+.showcase p{
+  font-size:15px;
+  opacity:.8;
+  color:#f0e6dc;
+}
+
+/* ========================================
+   RIGHT SIDE - AUTH PANEL
+======================================== */
+.auth-panel{
+  width:50%;
+  padding:50px;
+  background: linear-gradient(190deg,
+              rgba(70, 63, 58, 0.25),
+              rgba(105, 87, 68, 0.35),
+              rgba(90, 60, 35, 0.65));
+  backdrop-filter: blur(20px);
+  color:#f0e6dc;
+}
+
+.auth-panel h2{
+  text-align:center;
+  margin-bottom:30px;
+  font-weight:300;
+  letter-spacing:2px;
+}
+
+.auth-panel input{
+  width:100%;
+  padding:14px;
+  margin-bottom:20px;
+  background:none;
+  border:none;
+  border-bottom:1px solid rgba(255,255,255,0.4);
+  color:#f0e6dc;
+  font-size:16px;
+}
+
+.auth-panel input::placeholder{
+  color:rgba(255,255,255,.6);
+}
+
+/* ========================================
+   BUTTON - LOGIN
+======================================== */
+.login-btn{
+  width:100%;
+  padding:12px;
+  background: linear-gradient(135deg, #a17550, #6d4322);
+  color: white;
+  border: none;
+  transition: 0.3s transform;
+  border-radius:25px;
+  cursor:pointer;
+}
+
+.login-btn:hover{
+  transform: scale(1.02);
+  box-shadow: 0 0 15px rgba(160, 110, 69, 0.4);
+}
+
+/* ========================================
+   DIVIDER
+======================================== */
+.divider{
+  display:flex;
+  align-items:center;
+  gap:15px;
+  margin:30px 0;
+  font-size:12px;
+  opacity:.7;
+}
+
+.divider::before,
+.divider::after{
+  content:"";
+  flex:1;
+  height:1px;
+  background:rgba(255,255,255,.3);
+}
+
+/* ========================================
+   SOCIAL ICONS
+======================================== */
+.social{
+  display:flex;
+  justify-content:center;
+  gap:25px;
+}
+
+.social img{
+  width:22px;
+  filter: grayscale(100%) brightness(180%);
+  opacity:.8;
+  transition:.3s;
+  cursor:pointer;
+}
+
+.social img:hover{
+  opacity:1;
+  filter: grayscale(0%) brightness(250%);
+}
+
+/* ========================================
+   FOOTER
+======================================== */
+.footer {
+background: linear-gradient(190deg,
+              rgba(70, 63, 58, 0.25),
+              rgba(105, 87, 68, 0.35),
+              rgba(90, 60, 35, 0.65)); 
+  padding: 30px 0;      /* ارتفاع الفوتر */
+  width: 100%;           /* كامل عرض الصفحة */
+  box-sizing: border-box;
+  direction: rtl;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;        /* ينزل لسطر ثاني لو الشاشة صغيرة */
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.footer-link h2,
+.footer-link h4 {
+ margin: 0;             /* إزالة أي مسافة افتراضية */
+  padding: 0;            /* إزالة أي حشو */
+  color: white;
+  font-weight: 400;
+}
+
+.footer-link ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column; /* الروابط فوق بعض داخل كل مجموعة */
+  gap: 5px;
+}
+
+.footer-link ul li a {
+  color: #ccc;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-link ul li a:hover {
+  color: white;
+}
+.footer-link {
+ position: relative;
+  padding: 0 10px;       /* نص قريب من الخط */
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 12px;
+  width: 100%;
+}
+
+/* ====== Responsive ====== */
+
+/* ========================================
+   MEDIA QUERIES FOR MOBILE
+======================================== */
+/* .menu-icon {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #ffd186;
+} */
+
+/* شاشات أقل من 768px */
+@media (max-width: 768px) {
+
+  /* Navbar adjustments */
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: rgba(10,10,10,0.9);
+    flex-direction: column;
+    width: 200px;
+    display: none;
+    padding: 20px;
+    border-radius: 10px;
+    gap: 15px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .menu-icon {
+    display: block;
+    
+  }
+
+  /* Card adjustments */
+  .auth-card {
+    flex-direction: column;
+    width: 90%;
+    height: auto;
+  }
+
+  /* Left & right sides stacked vertically */
+  .showcase, .auth-panel {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .showcase img {
+    width: 250px;
+    height: auto;
+  }
+
+  .auth-panel input {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .login-btn {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .divider {
+    font-size: 10px;
+    gap: 10px;
+  }
+
+  .social img {
+    width: 18px;
+  }
+
+  /* Footer adjustments */
+  .footer-content {
+    grid-template-columns: 1fr; /* عمودي */
+    gap: 20px;
+  }
+}

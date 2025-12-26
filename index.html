@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl"> <!-- الصفحة باللغة العربية والاتجاه من اليمين لليسار -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TICTAC – Watches Store</title>
+<meta name="description" content="TICTAC متجر ساعات حديثة فاخرة وساعات إلكترونية يجمع بين الأناقة، الجودة، والتقنية لتجربة وقت مميزة.">
+    <!-- ربط ملف CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- اللوحة الرئيسية -->
+    <div class="main-panel">
+
+       <header class="navbar">
+
+  <!-- الجهة اليمنى: شعار + زر الموبايل -->
+  <div class="nav-right-group">
+      <div class="logo">TIC<span>TAC</span></div>
+      <div class="menu-icon">☰</div>
+  </div>
+
+  <!-- الروابط -->
+  <nav class="nav-links">
+      <a href="index.html">الرئيسية</a>
+
+      <!-- Dropdown المنتجات -->
+      <div class="dropdown">
+          <a href="javascript:void(0)" class="dropbtn">المنتجات ▾</a>
+          <div class="dropdown-content">
+              <a href="MprPage.html?type=modern">ساعات حديثة</a>
+              <a href="Sp.html?type=sport">ساعات رياضية</a>
+          </div>
+      </div>
+
+     <a href="aboutUs.html">من نحن</a>
+
+  </nav>
+
+  <!-- الأيقونات -->
+  <div class="nav-left-icons">
+      <div class="icon-group">
+          <div class="icon-item">♡ <span class="badge">8</span></div>
+          <div class="icon-item" onclick="goLogin()">👤</div>
+          <div class="icon-item" onclick="goCart()">🛒 <span class="badge">3</span></div>
+      </div>
+  </div>
+
+</header>
+
+
+        <!-- القسم الرئيسي -->
+        <main class="hero">
+
+            <!-- معلومات الساعة -->
+            <div class="info">
+                <span class="tag" id="watchTag">ساعات حديثة فاخرة</span>
+                <p class="code" id="watchCode">CH-3123-PABL</p>
+
+                <h3 class="main-title" id="watchTitle">
+                   تصميم عصري، دقة لا مثيل له
+                </h3>
+
+                <button class="btn-more">اكتشف المجموعة</button>
+            </div>
+
+            <!-- صورة الساعة -->
+            <div class="watch-box">
+                <img 
+                    src="image\ex1.png"
+                    alt="Watch"
+                    class="watch-img"
+                    id="mainWatch"
+                >
+
+                <!-- التبديل (ساعتين فقط) -->
+                <div class="pagination">
+                    <span onclick="changeWatch(2, this)">02</span>
+                    <span class="active" onclick="changeWatch(1, this)">01</span>
+                </div>
+            </div>
+
+        </main>
+
+    </div>
+<!-- قسم ساعات الأكثر مبيعاً -->
+<section class="best-sellers">
+  <h2>الأكثر مبيعاً</h2>
+  <div class="cards-container">
+    <div class="card">
+      <div class="card-heart" onclick="toggleFavorite(this)">♡</div>
+     
+      <img src="image/blgariwatch.png" alt="ساعة 1">
+       <!-- المربع الشفاف -->
+  <div class="card-info">
+    <h8> Serpenti Spiga (الساعة الثعبانية الذهبية)</h8>
+    <p> قمة الفخامة من بولغري، مستوحاة من سنابل القمح بتصميم ذهبي خلاب.
+</p>
+    
+  </div>
+      <button class="btn-more">اشتري الآن</button>
+    </div>
+    <div class="card">
+      <div class="card-heart-wrapper">
+      <div class="card-heart" onclick="toggleFavorite(this)">♡</div>
+      
+    </div>
+      <img src="image/sectorwatch.png" alt="ساعة 2">
+      <!-- المربع الشفاف -->
+  <div class="card-info">
+    <h8>ساعة Sector 240 Classic (الفضية)</h8>
+    <p>زيج مثالي بين التصميم الرياضي واللمسة الكلاسيكية، تناسب جميع الإطلالات.</p>
+ 
+  </div>
+      <button class="btn-more">اشتري الآن</button>
+    </div>
+    <div class="card">
+      <div class="card-heart" onclick="toggleFavorite(this)">♡</div>
+    
+      <img src="image/tissotwatch.png" alt="ساعة 3">
+      <!-- المربع الشفاف -->
+  <div class="card-info">
+    <h8>Tissot Classic Dream</h8>
+    <p>ساعة سويسرية كلاسيكية تجسد الأناقة الدائمة، مثالية للمناسبات الرسمية والعمل</p>
+   
+  </div>
+      <button class="btn-more">اشتري الآن</button>
+    </div>
+    <div class="card">
+      <div class="card-heart" onclick="toggleFavorite(this)">♡</div>
+   
+      <img src="image/123.png" alt="ساعة 4">
+      <!-- المربع الشفاف -->
+  <div class="card-info">
+    <h8>Power plink</h8>
+    <p>ساعة ذكية أنيقة تجمع بين التصميم العصري والوظائف الرياضية المتقدمة، مثالية للنساء اللواتي يبحثن عن الأناقة والأداء</p>
+   
+  </div>
+      <button class="btn-more">اشتري الآن</button>
+    </div>
+  </div>
+</section>
+
+
+<!-- Section Video -->
+<section class="cinema-video">
+  <video autoplay muted loop playsinline>
+    <source src="V2.mp4" type="video/mp4">
+    متصفحك لا يدعم تشغيل الفيديو
+  </video>
+
+  <!-- طبقة تعتيم خفيفة -->
+  <div class="video-overlay"></div>
+</section>
+<!-- حاوية للصورتين جنب بعض -->
+<div class="offers-row">
+
+  <!-- الصورة الأولى -->
+  <div class="image-box">
+    <img src="image\desboss.jpg" alt="عرض الساعة">
+    <div class="overlay">
+      <div class="sale-text">
+        <span class="limited">لفترة محدودة</span>
+        <span class="discount">تخفيض</span>
+        <span class="percent">30%</span>
+        <button class="discount-btn">اشترِي الآن</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- الصورة الثانية -->
+  <div class="discount-container">
+    <!-- الخلفية -->
+    <img src="image\womendes.jpg" alt="صورة التخفيض" class="discount-image">
+
+    <!-- الطبقة الشفافة -->
+    <div class="discount-overlay"></div>
+
+    <!-- النصوص + زر -->
+    <div class="sale-text">
+        <span class="limited">لفترة محدودة</span>
+        <span class="discount">تخفيض</span>
+        <span class="percent">30%</span>
+        <button class="discount-btn">اشترِي الآن</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ================== صف الدفات الصغار ================== -->
+<section class="brand-cards">
+   <h2>الماركات الاكثر تفضيلا</h2>
+  <div class="cards-row">
+    <div class="brand-card">
+      <img src="image/omegalogo.jpg" alt="Brand 1">
+    </div>
+    <div class="brand-card">
+      <img src="image/rolex.jpg" alt="Brand 2">
+    </div>
+    <div class="brand-card">
+      <img src="image/bosslogo.jpg" alt="Brand 3">
+    </div>
+    <div class="brand-card">
+      <img src="image/bulgarilogo.jpg" alt="Brand 4">
+    </div>
+    <div class="brand-card">
+      <img src="image/applewatchlogo.jpg" alt="Brand 5">
+    </div>
+   
+    <div class="brand-card">
+      <img src="image/tissotlogo.jpg" alt="Brand 6">
+    </div>
+  </div>
+</section>
+<footer class="footer">
+  <!-- العنوان الكبير -->
+  <div class="footer-header">
+    <h2>TICTAC</h2>
+  </div>
+
+  <!-- أسماء العناصر في صف واحد -->
+  <div class="footer-nav">
+    <div class="footer-link">
+      <h3>معلومات</h3>
+      <ul>
+        <li><a href="aboutUs.html">من نحن</a></li>
+        <li><a href="aboutUs.html">أسئلة متكررة</a></li>
+        <li><a href="aboutUs.html">إتصل بنا</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-link">
+      <h3>الشروط والسياسات</h3>
+      <ul>
+        <li><a href="#">شروط الاستخدام</a></li>
+        <li><a href="#">سياسة الخصوصية</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-link">
+      <h3>العنوان</h3>
+      <p>بن عاشور - طرابلس</p>
+    </div>
+
+    <div class="footer-link">
+      <h3>معلومات الوصول</h3>
+      <ul>
+        <li><a href="#">Tictac2025@gmail.com</a></li>
+        <li><a href="#">0915044592</a></li>
+        <li><a href="#">0925044592</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- نص أسفل الفوتر -->
+  <div class="footer-bottom">
+    © 2025 جميع الحقوق محفوظة
+  </div>
+</footer>
+
+
+    <!-- ملف الجافاسكريبت -->
+    <script src="hov.js"></script>
+</body>
+</html>

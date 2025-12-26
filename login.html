@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en"  dir="rtl">
+<head>
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Luxury Watch Login</title>
+  <link rel="icon" href="favicon.ico">
+    <!-- <link rel="icon" type="image/x-icon" href="facicon.icon"> -->
+
+  <link rel="stylesheet" href="login.css">
+</head>
+
+<body> 
+    <header class="navbar">
+
+  <!-- الجهة اليمنى: شعار + زر الموبايل -->
+  <div class="nav-right-group">
+      <div class="logo">TIC<span>TAC</span></div>
+      <div class="menu-icon">☰</div>
+  </div>
+
+  <!-- الروابط -->
+  <nav class="nav-links">
+      <a href="index.html">الرئيسية</a>
+
+      <!-- Dropdown المنتجات -->
+      <div class="dropdown">
+          <a href="javascript:void(0)" class="dropbtn">المنتجات ▾</a>
+          <div class="dropdown-content">
+              <a href="MprPage.html?type=modern">ساعات حديثة</a>
+              <a href="Sp.html?type=sport">ساعات رياضية</a>
+          </div>
+      </div>
+
+     <a href="aboutUs.html">من نحن</a>
+
+  </nav>
+
+  <!-- الأيقونات -->
+  <div class="nav-left-icons">
+      <div class="icon-group">
+          <div class="icon-item">♡ <span class="badge">8</span></div>
+          <div class="icon-item" onclick="goLogin()">👤</div>
+          <div class="icon-item" onclick="goCart()">🛒 <span class="badge">3</span></div>
+      </div>
+  </div>
+
+</header>
+
+   <div class="cards">
+<div class="auth-card">
+
+  <!-- LEFT : WATCH SHOWCASE -->
+  <div class="showcase">
+    <!-- <img src="images/download (6).jpg" alt="Luxury Watch"> -->
+    <h3>ROLEX COSMOGRAPH</h3>
+    <p>رمز الدقة والفخامة الخالدة</p>
+  </div>
+
+  <!-- RIGHT : LOGIN -->
+  <div class="auth-panel">
+    <h2>اكتشف أناقة الوقت معنا</h2>
+
+    <input type="text" placeholder="إسم المستخدم">
+    <input type="password" placeholder="كلمة المرور">
+
+    <button class="login-btn">دخول</button>
+
+    <div class="divider">
+      <span>OR SIGN IN WITH</span>
+    </div>
+
+    <div class="social">
+      <img src="https://cdn-icons-png.flaticon.com/512/300/300221.png">
+      <img src="https://cdn-icons-png.flaticon.com/128/733/733553.png">
+      <img src="https://cdn-icons-png.flaticon.com/128/145/145802.png">
+      
+    </div>
+  </div>
+
+</div>
+</div>
+<footer class="footer">
+  <div class="footer-content">
+
+    <div class="footer-link">
+      <h2>معلومات</h2>
+      <ul>
+        <li style="text-align: right;"><a href="aboutUs.html">من نحن</a></li>
+        <li><a href="aboutUs.html">أسئلة متكررة</a></li>
+        <li style="text-align: right;"><a href="aboutUs.html">إتصل بنا</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-link">
+      <h4>الشروط والسياسات</h4>
+      <ul>
+        <li style="text-align: right;"><a href="#">شروط الاستخدام</a></li>
+        <li style="text-align: right;"><a href="#">سياسة الخصوصية</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-link">
+      <h2 style="text-align: right;">العنوان</h2>
+      <p >بن عاشور - طرابلس</p>
+    </div>
+
+    <div class="footer-link">
+      <h4 style="text-align: right;">معلومات الوصول</h4>
+      <ul>
+        <li><a href="#">Tictac2025@gmail.com</a></li>
+        <li style="text-align: right;"><a href="#">0915044592</a></li>
+        <li style="text-align: right;"><a href="#">0925044592</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2025 جميع الحقوق محفوظة
+  </div>
+</footer>
+  <script>
+const menuIcon = document.querySelector('.menu-icon');
+const navLinks = document.querySelector('.nav-links');
+
+menuIcon.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+});
+</script>
+ <!-- ملف الجافاسكريبت -->
+    <script src="hov.js"></script>
+</body>
+</html>
