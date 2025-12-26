@@ -160,4 +160,20 @@ document.addEventListener("click", function(e) {
 //         this.parentElement.classList.toggle('active');
 //     }
 // });
+// زر اكتشف المزيد
+const discoverBtn = document.getElementById('discoverBtn');
+
+if (discoverBtn) {
+  discoverBtn.addEventListener('click', () => {
+    const theme = localStorage.getItem("userTheme");
+
+    if(theme === "brown") {
+      // القهوي → صفحة المنتجات الرياضية
+      window.location.href = "Sp.html"; 
+    } else {
+      // الأزرق → صفحة المنتجات الحديثة
+      window.location.href = "MprPage.html";
+    }
+  });
+}
 

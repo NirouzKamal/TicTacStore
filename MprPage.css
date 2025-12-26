@@ -10,6 +10,17 @@ body {
   min-height: 100vh;
   color: white;
   overflow-x: hidden; /* لمنع ظهور شريط التمرير العرضي */
+  background: linear-gradient(to right bottom,
+    #2b6081,
+    #14425f,
+    #030f16 ,
+    #03111e,
+    #031f30,
+    #3065a5,
+    #2e4968
+   );
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 .page {

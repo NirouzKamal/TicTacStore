@@ -5,6 +5,7 @@
     padding: 0;
     box-sizing: border-box;
     transition: background 0.6s ease, color 0.4s ease, transform 0.6s ease, opacity 0.5s ease;
+    scroll-behavior: smooth;
 }
 * {
   font-family: "Times new roman", sans-serif;
@@ -715,10 +716,15 @@ body.theme-3 .footer {
 /*         Cinema Video          */
 /* ============================= */
 .cinema-video-wrapper {
+  width: 100%;
+  max-width: 1200px;
+  margin: 50px auto;
   display: flex;
   justify-content: center;
-  
+  overflow: hidden;
+  border-radius: 35px;
 }
+
 
 .cinema-video {
   position: relative;
@@ -972,8 +978,13 @@ body.theme-3 .footer {
 
   /* الفيديو */
   .cinema-video {
-    height: 35vh;
+    height: 50vh; /* أطول للفيديو على الموبايل */
     border-radius: 20px;
+  }
+  .cinema-video video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; /* يغطي كل الصندوق */
   }
 
   /* العروض */
