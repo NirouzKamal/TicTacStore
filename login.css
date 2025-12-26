@@ -444,14 +444,8 @@ body{
    MEDIA QUERIES FOR MOBILE (768px)
 ======================================== */
 @media (max-width: 768px) {
-
-    /* 1. إظهار أيقونة المنيو */
-    .menu-icon {
-        display: block;
-        z-index: 1001;
-    }
-
-    /* 2. تنسيق القائمة الرئيسية (الأم) */
+  @media (max-width: 768px) {
+/* 2. تنسيق القائمة الرئيسية (الأم) */
     .nav-links {
         display: none; /* مخفية وتظهر بالـ active */
         position: absolute;
@@ -502,6 +496,12 @@ body{
         flex-direction: column;
     }
 
+
+    .menu-icon {
+          display: block;
+        z-index: 1001;
+    }
+  }
     /* 4. تنسيق الكروت (Login Card) للموبايل */
     .auth-card {
         flex-direction: column;

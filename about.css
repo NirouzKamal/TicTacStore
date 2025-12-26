@@ -160,45 +160,64 @@ body{
 
 /* ========== Responsive ========== */
 @media (max-width: 768px) {
-
-    .menu-icon {
-        display: block; /* يظهر */
-    }
-
+  @media (max-width: 768px) {
+/* 2. تنسيق القائمة الرئيسية (الأم) */
     .nav-links {
-        display: none; /* يختفي على الموبايل */
+        display: none; /* مخفية وتظهر بالـ active */
         position: absolute;
-        top: 55px;
-        right: 0;
-        background: rgba(0,0,0,0.95);
+        top: 60px;
+        right: 15px;
+        background: rgba(0, 0, 0, 0.95); /* خلفية داكنة لضمان وضوح النص */
         flex-direction: column;
-        padding: 15px;
-        border-radius: 10px;
-        width: 200px;
+        width: 220px;
+        padding: 20px;
+        border-radius: 15px;
         z-index: 1000;
+        align-items: flex-start;
+        gap: 5px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
     }
 
     .nav-links.active {
-        display: flex; /* تظهر عند الضغط */
+        display: flex; /* تظهر عند الضغط على زر المنيو */
     }
 
     .nav-links a {
-        margin: 10px 0;
+        width: 100%;
+        margin: 5px 0;
+        padding: 5px 0;
     }
 
-    /* Dropdown على الموبايل عند الضغط */
-     .nav-links .dropdown-content {
-      display: none;
-      flex-direction: column;
-      padding-left: 0;
-      margin: 5px 0;
-      background: rgba(0,0,0,0.9); /* <- هنا شفافية القايمة في الموبايل */
-  }
+    /* 3. حل مشكلة تداخل النصوص (Dropdown) */
+    .nav-links .dropdown {
+        width: 100%;
+    }
 
+    .nav-links .dropdown-content {
+        position: relative; /* هذا يمنع الكلمات من الدخول في بعضها */
+        top: 0;
+        right: 0;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.05); /* تمييز بسيط للقائمة الفرعية */
+        border-radius: 8px;
+        margin-top: 5px;
+        padding-right: 15px; /* إزاحة جهة اليمين */
+        display: none; /* مخفية وتظهر عند الضغط */
+        box-shadow: none;
+    }
+
+    /* إظهار القائمة الفرعية عند الضغط */
     .nav-links .dropdown.active .dropdown-content {
-      display: flex;
-  }
-}
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    .menu-icon {
+          display: block;
+        z-index: 1001;
+    }
+  }}
 /* HERO */
 .hero{
   height:60vh;
@@ -350,18 +369,6 @@ body{
 }
 
 @media (max-width: 768px) {
-  .footer-nav {
-    flex-direction: column; /* العناصر تصير تحت بعض */
-    align-items: center;
-    gap: 20px;
-  }
-
-  .footer-link {
-    text-align: center;
-  }
-}
-
-@media (max-width: 600px) {
   .footer-nav {
     flex-direction: column; /* العناصر تصير تحت بعض */
     align-items: center;
