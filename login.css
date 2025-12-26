@@ -36,7 +36,7 @@ body{
     width: 100%;
     padding: 5px 15px;
     background: #11111100;
-    position: sticky; /* navbar ينزل معاك */
+    position: absolute; /* navbar ينزل معاك */
     top: 0;
     z-index: 1000;
     direction: rtl;
@@ -57,7 +57,7 @@ body{
     letter-spacing: 2px;
 }
 
-.logo span {
+.nav-logo span {
     color: #00d4ff;
 }
 
@@ -172,47 +172,7 @@ body{
     user-select: none;
 }
 
-/* ========== Responsive ========== */
-@media (max-width: 768px) {
 
-    .menu-icon {
-        display: block; /* يظهر */
-    }
-
-    .nav-links {
-        display: none; /* يختفي على الموبايل */
-        position: absolute;
-        top: 55px;
-        right: 0;
-        background: rgba(0,0,0,0.95);
-        flex-direction: column;
-        padding: 15px;
-        border-radius: 10px;
-        width: 200px;
-        z-index: 1000;
-    }
-
-    .nav-links.active {
-        display: flex; /* تظهر عند الضغط */
-    }
-
-    .nav-links a {
-        margin: 10px 0;
-    }
-
-    /* Dropdown على الموبايل عند الضغط */
-     .nav-links .dropdown-content {
-      display: none;
-      flex-direction: column;
-      padding-left: 0;
-      margin: 5px 0;
-      background: rgba(0,0,0,0.9); /* <- هنا شفافية القايمة في الموبايل */
-  }
-
-    .nav-links .dropdown.active .dropdown-content {
-      display: flex;
-  }
-}
 
 /* ========================================
    WRAPPER / CARDS CONTAINER
@@ -400,140 +360,228 @@ body{
   opacity:1;
   filter: grayscale(0%) brightness(250%);
 }
-
 /* ========================================
-   FOOTER
+    
+/* ========================================
+    FOOTER (صافي وبدون خطوط فواصل)
 ======================================== */
 .footer {
-  background: linear-gradient(to right bottom, #15374b, #0b293b, #030f16, #03111e, #031f30, #0a1e35, #1f3349);
-  color: #ccc;
-  padding: 30px 0;      /* ارتفاع الفوتر */
-  width: 100%;           /* كامل عرض الصفحة */
-  box-sizing: border-box;
-  direction: rtl;
+    background: linear-gradient(to right bottom, #15374b, #0b293b, #030f16, #03111e, #031f30, #0a1e35, #1f3349);
+    color: #ccc;
+    padding: 60px 20px; /* زيادة المسافة العلوية ليعطي فخامة */
+    width: 100%;
+    box-sizing: border-box;
+    direction: rtl;
+    font-family: 'Times New Roman', Times, serif;
 }
 
-.footer-content {
-  display: flex;
-  flex-wrap: wrap;        /* ينزل لسطر ثاني لو الشاشة صغيرة */
-  justify-content: space-between;
-  gap: 40px;
-  max-width: 1200px;
-  margin: auto;
-  padding: 0 20px;
+/* العنوان الكبير للمتجر */
+.footer-header h2 {
+    color: #fff;
+    font-weight: bold;
+    font-size: 28px;
+    margin-bottom: 40px;
+    text-align: right;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.footer-link h2,
-.footer-link h4 {
- margin: 0;             /* إزالة أي مسافة افتراضية */
-  padding: 0;            /* إزالة أي حشو */
-  color: white;
-  font-weight: 400;
+/* توزيع الأعمدة بجانب بعضها */
+.footer-nav {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto 40px;
 }
 
+/* العمود الواحد */
+.footer-link {
+    flex: 1;
+    min-width: 150px; /* لضمان عدم صغر العمود جداً */
+    text-align: right;
+}
+
+.footer-link h3 {
+    color: #fff;
+    font-weight: bold;
+    font-size: 17px;
+    margin-bottom: 20px;
+}
+
+.footer-link ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-link ul li a {
+    color: #ada8a8;
+    text-decoration: none;
+    display: block;
+    margin: 10px 0;
+    transition: 0.3s ease;
+    font-size: 15px;
+}
+
+.footer-link ul li a:hover {
+    color: #fff;
+    transform: translateX(-5px); /* حركة بسيطة لليمين بدل الخط */
+}
+
+/* الحقوق في الأسفل */
+.footer-bottom {
+    text-align: center;
+    padding-top: 30px;
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.4);
+}
+/* ====== Responsive ====== */
+
+/* ========================================
+   MEDIA QUERIES FOR MOBILE (768px)
+======================================== */
+@media (max-width: 768px) {
+
+    /* 1. إظهار أيقونة المنيو */
+    .menu-icon {
+        display: block;
+        z-index: 1001;
+    }
+
+    /* 2. تنسيق القائمة الرئيسية (الأم) */
+    .nav-links {
+        display: none; /* مخفية وتظهر بالـ active */
+        position: absolute;
+        top: 60px;
+        right: 15px;
+        background: rgba(0, 0, 0, 0.95); /* خلفية داكنة لضمان وضوح النص */
+        flex-direction: column;
+        width: 220px;
+        padding: 20px;
+        border-radius: 15px;
+        z-index: 1000;
+        align-items: flex-start;
+        gap: 5px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .nav-links.active {
+        display: flex; /* تظهر عند الضغط على زر المنيو */
+    }
+
+    .nav-links a {
+        width: 100%;
+        margin: 5px 0;
+        padding: 5px 0;
+    }
+
+    /* 3. حل مشكلة تداخل النصوص (Dropdown) */
+    .nav-links .dropdown {
+        width: 100%;
+    }
+
+    .nav-links .dropdown-content {
+        position: relative; /* هذا يمنع الكلمات من الدخول في بعضها */
+        top: 0;
+        right: 0;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.05); /* تمييز بسيط للقائمة الفرعية */
+        border-radius: 8px;
+        margin-top: 5px;
+        padding-right: 15px; /* إزاحة جهة اليمين */
+        display: none; /* مخفية وتظهر عند الضغط */
+        box-shadow: none;
+    }
+
+    /* إظهار القائمة الفرعية عند الضغط */
+    .nav-links .dropdown.active .dropdown-content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* 4. تنسيق الكروت (Login Card) للموبايل */
+    .auth-card {
+        flex-direction: column;
+        width: 90%;
+        height: auto;
+        margin-top: 20px;
+    }
+
+    .showcase, .auth-panel {
+        width: 100%;
+        padding: 30px 20px;
+    }
+
+    .showcase img {
+        width: 200px;
+        height: auto;
+    }
+
+    /* 5. تنسيق الفوتر للموبايل */
+ .footer {
+        padding: 40px 20px;
+        text-align: center;
+    }
+
+    .footer-header h2 {
+        text-align: center;
+        margin: 0 0 20px 0;
+    }
+
+    .footer-nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 25px; /* مسافة بدل الخطوط الفاصلة */
+    }
+
+    .footer-link {
+        flex: 1;
+        text-align: center;
+        border-right: none !important; /* حذف الخط الجانبي */
+        border-bottom: none !important; /* حذف الخط السفلي */
+        padding: 0;
+        width: 100%;
+    }
+
+    .footer-bottom {
+        border-top: none !important; /* حذف خط الحقوق */
+        margin-top: 20px;
+        padding-top: 0;
+    }
+
+/* قائمة الروابط تحت كل عنصر */
 .footer-link ul {
   list-style: none;
   padding: 0;
   margin: 0;
-  display: flex;
-  flex-direction: column; /* الروابط فوق بعض داخل كل مجموعة */
-  gap: 5px;
 }
-
 .footer-link ul li a {
-  color: #ccc;
+  color: #ada8a8;
   text-decoration: none;
+  display: block;
+  margin: 5px 0;
   transition: 0.3s;
 }
 
 .footer-link ul li a:hover {
-  color: white;
-}
-.footer-link {
- position: relative;
-  padding: 0 10px;       /* نص قريب من الخط */
-  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
 }
 
-
-.footer-bottom {
-  text-align: center;
-  margin-top: 20px;
-  padding-top: 10px;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  font-size: 12px;
-  width: 100%;
+/* نصوص الفقرة داخل المجموعة */
+.footer-link p {
+  color: #ada8a8;
+  margin: 5px 0;
 }
 
-/* ====== Responsive ====== */
 
 
-
-@media (max-width: 768px) {
-
-  /* Navbar adjustments */
-  .nav-links {
-    position: absolute;
-    top: 70px;
-    right: 0;
-    background: rgba(10,10,10,0.9);
-    flex-direction: column;
-    width: 200px;
-    display: none;
-    padding: 20px;
-    border-radius: 10px;
-    gap: 15px;
-  }
-
-  .nav-links.active {
-    display: flex;
-  }
-
-  .menu-icon {
-    display: block;
-  }
-
-  /* Card adjustments */
-  .auth-card {
-    flex-direction: column;
-    width: 90%;
-    height: auto;
-  }
-
-  /* Left & right sides stacked vertically */
-  .showcase, .auth-panel {
-    width: 100%;
-    padding: 20px;
-  }
-
-  .showcase img {
-    width: 250px;
-    height: auto;
-  }
-
-  .auth-panel input {
-    padding: 10px;
-    font-size: 14px;
-  }
-
-  .login-btn {
-    padding: 10px;
-    font-size: 14px;
-  }
-
-  .divider {
-    font-size: 10px;
-    gap: 10px;
-  }
-
-  .social img {
-    width: 18px;
-  }
-
-  /* Footer adjustments */
-  .footer-content {
-    grid-template-columns: 1fr; /* عمودي */
-    gap: 20px;
-  }
 }
+
+
+
+
+/* ========== Responsive ========== */
 

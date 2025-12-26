@@ -19,9 +19,10 @@ body{
     width: 100%;
     padding: 5px 15px;
     background: #11111100;
-    position: sticky; /* navbar ينزل معاك */
+    position: absolute; /* navbar ينزل معاك */
     top: 0;
     z-index: 1000;
+    direction: rtl;
     margin-top: 10px;
 }
 
@@ -39,7 +40,7 @@ body{
     letter-spacing: 2px;
 }
 
-.logo span {
+.nav-logo span {
     color: #00d4ff;
 }
 
@@ -153,6 +154,9 @@ body{
     cursor: pointer;
     user-select: none;
 }
+
+
+
 
 /* ========== Responsive ========== */
 @media (max-width: 768px) {

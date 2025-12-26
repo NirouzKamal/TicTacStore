@@ -153,3 +153,11 @@ document.addEventListener("click", function(e) {
   }
 });
 
+// // كود لفتح قائمة المنتجات المنسدلة عند الضغط في الموبايل
+// document.querySelector('.dropbtn').addEventListener('click', function(e) {
+//     if (window.innerWidth <= 768) {
+//         e.preventDefault();
+//         this.parentElement.classList.toggle('active');
+//     }
+// });
+

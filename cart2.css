@@ -19,54 +19,52 @@ body {
 
 /*       Navbar         */
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  padding-top: 15px;
-  padding: 15px 35px;
-  font-size: 21px;
-  box-sizing: border-box;
+display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 5px 15px;
+    background: transparent;
+    position: absolute; 
+    top: 0;
+    z-index: 1000;
+    direction: rtl; /* لضمان الترتيب العربي */
+    margin-top: 10px;
 }
 
 .nav-right-group {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  flex: 1;
-  padding-top: 5px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
 }
 
-.nav-left-icons {
+/* .nav-left-icons {
   display: flex;
   justify-content: flex-end;
   align-items: center;
   gap: 20px;
   flex: 1;
   padding-top: 15px;
-}
+} */
 
 .nav-links {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  flex: 2;
-  margin-left: 0px;
-  margin-right: 0px;
+display: flex;
+    gap: 30px;
+    align-items: center;
 }
 
 .nav-links a {
-  text-decoration: none;
-  color: rgba(255, 255, 255, 0.7);
-  font-weight: 600;
-  position: relative;
-  font-size: 20px;
-  padding-top: 15px;
+text-decoration: none;
+    color: rgba(255,255,255,0.7);
+    font-weight: 600;
+    position: relative;
+    font-size: 14px;
+    transition: 0.3s;
 }
 
 .nav-links a:hover {
   color: #ffffff;
-  transform: translateY(-2px);
+  
 }
 
 .nav-links a::after {
@@ -76,7 +74,7 @@ body {
   height: 2px;
   bottom: -5px;
   left: 50%;
-  background-color: #00d4ff;
+  background-color: #9e5e2e;
   transition: all 0.3s ease;
   transform: translateX(-50%);
 }
@@ -102,18 +100,18 @@ body {
 
 .icon-item::before {
   content: "";
-  /* position: absolute; */
+  position: absolute;
   top: -18px;
   left: 50%;
   transform: translateX(-50%);
   width: 30px;
   height: 45px;
   background: radial-gradient(
-    ellipse at top,
-    rgba(255, 255, 255, 0.9),
-    rgba(255, 255, 255, 0.35),
-    transparent 65%
-  );
+        ellipse at top,
+        rgba(255, 179, 71, 0.7),
+        rgba(255, 179, 71, 0.2),
+        transparent 70%
+    );
   opacity: 0;
   filter: blur(4px);
   transition: opacity 0.3s ease;
@@ -158,9 +156,50 @@ body {
 }
 
 .menu-icon {
-  color: #ffffff;
-  /* margin-left: 0px; */
+    display: none;
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+    user-select: none;
 }
+/* Dropdown */
+.nav-links .dropdown {
+    position: relative;
+}
+
+.nav-links .dropbtn {
+    cursor: pointer;
+    color: rgba(255,255,255,0.7);
+    font-weight: 600;
+}
+
+.nav-links .dropdown-content {
+display: none;
+    position: absolute;
+    top: 25px;
+    right: 0;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    flex-direction: column;
+    min-width: 150px;
+    overflow: hidden;
+}
+
+.nav-links .dropdown-content a {
+    color: #ccc;
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+}
+
+.nav-links .dropdown-content a:hover {
+background: #9e5e2e33; /* خلفية قهوية خفيفة عند الهوفر */
+    color: #fff;
+}
+.nav-links .dropdown.active .dropdown-content {
+    display: flex;
+}
+
 
 .container {
   max-width: 900px;
@@ -271,8 +310,12 @@ h1 {
   background: #fffefd;
   box-shadow: 0 0 15px #8f6f5a;
 }
+
+/* ========================================
+    FOOTER (صافي وبدون خطوط فواصل)
+======================================== */
 .footer {
-  background: linear-gradient(
+ background: linear-gradient(
     190deg,
     #583c18 0%,
     #6f5534 25%,
@@ -280,80 +323,77 @@ h1 {
     #1c0f00 70%,
     #000000 100%
   );
-  color: #ccc;
-  padding: 40px 20px; /* تساوي الحواشي */
-  margin: 0; /* نضمن ما فيش فراغ خارجي */
-  width: 100%;
-  /* box-sizing: border-box; */
-  text-align: center;
-  font-family: "Times New Roman", Times, serif;
+    color: #ccc;
+    padding: 60px 20px; /* زيادة المسافة العلوية ليعطي فخامة */
+    width: 100%;
+    box-sizing: border-box;
+    direction: rtl;
+    font-family: 'Times New Roman', Times, serif;
 }
 
-/* العنوان الكبير */
+/* العنوان الكبير للمتجر */
 .footer-header h2 {
-  color: #fff;
-  font-weight: bold;
-  font-size: 28px;
-  margin: 12px 18px 7px 0px;
-  text-align: right;
+    color: #fff;
+    font-weight: bold;
+    font-size: 28px;
+    margin-bottom: 40px;
+    text-align: right;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-/* صف أسماء العناصر */
+/* توزيع الأعمدة بجانب بعضها */
 .footer-nav {
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
-  flex-wrap: wrap;
-  max-width: 1200px;
-  margin: 0 auto 30px; /* يخلي المحتوى في الوسط */
-  box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto 40px;
 }
 
-/* كل عنصر */
+/* العمود الواحد */
 .footer-link {
-  flex: 1; /* يجعل كل عنصر متساوي العرض */
-  text-align: right; /* العنوان والروابط في الوسط */
+    flex: 1;
+    min-width: 150px; /* لضمان عدم صغر العمود جداً */
+    text-align: right;
 }
 
 .footer-link h3 {
-  color: #fff;
-  font-weight: bold; /* Bold حسب طلبك */
-  font-size: 16px;
-  margin-bottom: 10px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 17px;
+    margin-bottom: 20px;
 }
 
-/* قائمة الروابط تحت كل عنصر */
 .footer-link ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 .footer-link ul li a {
-  color: #ada8a8;
-  text-decoration: none;
-  display: block;
-  margin: 5px 0;
-  transition: 0.3s;
+    color: #ada8a8;
+    text-decoration: none;
+    display: block;
+    margin: 10px 0;
+    transition: 0.3s ease;
+    font-size: 15px;
 }
 
 .footer-link ul li a:hover {
-  color: #fff;
+    color: #fff;
+    transform: translateX(-5px); /* حركة بسيطة لليمين بدل الخط */
 }
 
-/* نصوص الفقرة داخل المجموعة */
-.footer-link p {
-  color: #ada8a8;
-  margin: 5px 0;
-}
-
-/* نص أسفل الفوتر */
+/* الحقوق في الأسفل */
 .footer-bottom {
-  text-align: center;
-  font-size: 12px;
-  color: #ccc;
+    text-align: center;
+    padding-top: 30px;
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.4);
 }
-
 /* Responsive */
 
 @media (max-width: 1024px) {
@@ -363,18 +403,49 @@ h1 {
 }
 
 @media (max-width: 768px) {
-    .navbar {
-      padding-top: 30px;
-      padding-left: 10px;
-      padding-right: 10px;
-      /* padding: 10px 20px; */
-      font-size: 18px; /* تصغير حجم الخط العام */
+ 
+.menu-icon {
+        display: block; /* يظهر */
     }
 
-    .nav-links a {
-      font-size: 16px; /* تصغير الروابط */
-      padding-top: 10px;
+.nav-links {
+        display: none; /* يختفي على الموبايل */
+        position: absolute;
+        top: 55px;
+        right: 0;
+        background: rgba(0,0,0,0.95);
+        border-radius: 10px;
+        width: 200px;
+        z-index: 1000;
+        flex-direction: column;
+        align-items: flex-start; /* محاذاة النص لليمين */
+        padding: 20px;
+        height: auto; /* تجعل الارتفاع يتحدد حسب المحتوى */
+        gap: 10px; /* مسافة بين الروابط الرئيسية */
+}
+.nav-links.active {
+        display: flex; /* تظهر عند الضغط */
     }
+    .nav-links a {
+            margin: 10px 0;
+
+    }
+        /* Dropdown على الموبايل عند الضغط */
+.nav-links .dropdown-content {
+position: relative; /* هذا هو السر: يلغي تداخل العناصر ويجعلها تدفع ما تحتها */
+        top: 0;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.05); /* خلفية مميزة قليلاً */
+        box-shadow: none;
+        padding-right: 15px; /* إزاحة بسيطة لليمين لتبدو كقائمة فرعية */
+        margin-top: 5px;
+        display: none; /* تختفي وتظهر عند الضغط */
+  }
+
+.nav-links .dropdown.active .dropdown-content {
+      display: flex;
+      flex-direction: column;
+  }
 
     .icon-group {
       gap: 10px; /* تقليل المسافة بين الأيقونات */
@@ -400,15 +471,88 @@ h1 {
       padding-left: 10px;
       font-size: 15px;
     }
-  .footer-nav {
-    flex-direction: column; /* العناصر تصير تحت بعض */
-    align-items: center;
-    gap: 20px;
-  }
-
-  .footer-link {
+/* ========================================
+   FOOTER MOBILE - BROWN THEME
+======================================== */
+.footer {
+    /* الخلفية القهوية المتدرجة */
+    background: linear-gradient(190deg, 
+        rgba(70, 63, 58, 0.95), 
+        rgba(43, 22, 8, 0.98)); 
+    padding: 40px 20px;
     text-align: center;
-  }
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.footer-header h2 {
+    color: #ffd186; /* لون ذهبي هادئ */
+    font-weight: bold;
+    font-size: 26px;
+    margin: 0 0 30px 0;
+    text-align: center; /* توسيط في الموبايل */
+}
+
+.footer-nav {
+    display: flex;
+    flex-direction: column; /* ترتيب عمودي */
+    align-items: center;
+    gap: 30px; /* مسافة كافية بدل الخطوط */
+}
+
+.footer-link {
+    flex: 1;
+    text-align: center;
+    border-right: none !important; /* إزالة أي فواصل جانبية */
+    border-bottom: none !important; /* إزالة أي فواصل سفلية */
+    padding: 0;
+    width: 100%;
+}
+
+.footer-link h3 {
+    color: #fff;
+    font-weight: bold;
+    font-size: 17px;
+    margin-bottom: 12px;
+}
+
+/* قائمة الروابط */
+.footer-link ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-link ul li a {
+    color: #ada8a8;
+    text-decoration: none;
+    display: block;
+    margin: 8px 0;
+    transition: 0.3s;
+    font-size: 15px;
+}
+
+.footer-link ul li a:hover {
+    color: #ffd186; /* تغيير اللون للذهبي عند التمرير */
+    transform: translateY(-2px);
+}
+
+/* نصوص الفقرة (مثل العنوان أو الإيميل) */
+.footer-link p {
+    color: #ada8a8;
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+/* الجزء السفلي (الحقوق) */
+.footer-bottom {
+    border-top: none !important; /* إزالة خط الحقوق */
+    margin-top: 30px;
+    padding-top: 0;
+    text-align: center;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.3);
+}
 }
 
 @media (max-width: 600px) {
