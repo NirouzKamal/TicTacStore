@@ -48,18 +48,17 @@ body {
 } */
 
 .nav-links {
-   display: flex;
-    gap: 30px;
-    align-items: center;
+  display: flex;
+  gap: 30px;
+  align-items: center;
 }
 
 .nav-links a {
-    text-decoration: none;
-    color: rgba(255,255,255,0.7);
-    font-weight: 600;
-    position: relative;
-    font-size: 14px;
-    
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 600;
+  position: relative;
+  font-size: 14px;
 }
 
 .nav-links a:hover {
@@ -92,8 +91,8 @@ body {
 }
 
 .icon-item {
-   position: relative;
-    cursor: pointer;
+  position: relative;
+  cursor: pointer;
 }
 
 .icon-item::before {
@@ -154,47 +153,47 @@ body {
 }
 
 .menu-icon {
-   display: none;
-    font-size: 28px;
-    color: white;
-    cursor: pointer;
-    user-select: none;
+  display: none;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+  user-select: none;
 }
 /* Dropdown */
 .nav-links .dropdown {
-    position: relative;
+  position: relative;
 }
 
 .nav-links .dropbtn {
-    cursor: pointer;
-    color: rgba(255,255,255,0.7);
-    font-weight: 600;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 600;
 }
 
 .nav-links .dropdown-content {
-    display: none;
-    position: absolute;
-    top: 25px;
-    right: 0;
-    background: rgba(0, 0, 0, 0.6);
-    border-radius: 10px;
-    flex-direction: column;
-    min-width: 150px;
+  display: none;
+  position: absolute;
+  top: 25px;
+  right: 0;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  flex-direction: column;
+  min-width: 150px;
 }
 
 .nav-links .dropdown-content a {
-    color: #ccc;
-    padding: 10px 15px;
-    text-decoration: none;
-    display: block;
+  color: #ccc;
+  padding: 10px 15px;
+  text-decoration: none;
+  display: block;
 }
 
 .nav-links .dropdown-content a:hover {
-    background: #00d4ff33;
-    color: #fff;
+  background: #00d4ff33;
+  color: #fff;
 }
 .nav-links .dropdown.active .dropdown-content {
-    display: flex;
+  display: flex;
 }
 
 .container {
@@ -311,77 +310,86 @@ h1 {
     FOOTER (صافي وبدون خطوط فواصل)
 ======================================== */
 .footer {
-    background: linear-gradient(to right bottom, #15374b, #0b293b, #030f16, #03111e, #031f30, #0a1e35, #1f3349);
-    color: #ccc;
-    padding: 60px 20px; /* زيادة المسافة العلوية ليعطي فخامة */
-    width: 100%;
-    box-sizing: border-box;
-    direction: rtl;
-    font-family: 'Times New Roman', Times, serif;
+  background: linear-gradient(
+    to right bottom,
+    #15374b,
+    #0b293b,
+    #030f16,
+    #03111e,
+    #031f30,
+    #0a1e35,
+    #1f3349
+  );
+  color: #ccc;
+  padding: 60px 20px; /* زيادة المسافة العلوية ليعطي فخامة */
+  width: 100%;
+  box-sizing: border-box;
+  direction: rtl;
+  font-family: "Times New Roman", Times, serif;
 }
 
 /* العنوان الكبير للمتجر */
 .footer-header h2 {
-    color: #fff;
-    font-weight: bold;
-    font-size: 28px;
-    margin-bottom: 40px;
-    text-align: right;
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
+  color: #fff;
+  font-weight: bold;
+  font-size: 28px;
+  margin-bottom: 40px;
+  text-align: right;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* توزيع الأعمدة بجانب بعضها */
 .footer-nav {
-    display: flex;
-    justify-content: space-between;
-    gap: 30px;
-    flex-wrap: wrap;
-    max-width: 1200px;
-    margin: 0 auto 40px;
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto 40px;
 }
 
 /* العمود الواحد */
 .footer-link {
-    flex: 1;
-    min-width: 150px; /* لضمان عدم صغر العمود جداً */
-    text-align: right;
+  flex: 1;
+  min-width: 150px; /* لضمان عدم صغر العمود جداً */
+  text-align: right;
 }
 
 .footer-link h3 {
-    color: #fff;
-    font-weight: bold;
-    font-size: 17px;
-    margin-bottom: 20px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 17px;
+  margin-bottom: 20px;
 }
 
 .footer-link ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .footer-link ul li a {
-    color: #ada8a8;
-    text-decoration: none;
-    display: block;
-    margin: 10px 0;
-    transition: 0.3s ease;
-    font-size: 15px;
+  color: #ada8a8;
+  text-decoration: none;
+  display: block;
+  margin: 10px 0;
+  transition: 0.3s ease;
+  font-size: 15px;
 }
 
 .footer-link ul li a:hover {
-    color: #fff;
-    transform: translateX(-5px); /* حركة بسيطة لليمين بدل الخط */
+  color: #fff;
+  transform: translateX(-5px); /* حركة بسيطة لليمين بدل الخط */
 }
 
 /* الحقوق في الأسفل */
 .footer-bottom {
-    text-align: center;
-    padding-top: 30px;
-    font-size: 13px;
-    color: rgba(255, 255, 255, 0.4);
+  text-align: center;
+  padding-top: 30px;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.4);
 }
 
 /* Responsive */
@@ -394,119 +402,117 @@ h1 {
 
 @media (max-width: 768px) {
   @media (max-width: 768px) {
-/* 2. تنسيق القائمة الرئيسية (الأم) */
+    /* 2. تنسيق القائمة الرئيسية (الأم) */
     .nav-links {
-        display: none; /* مخفية وتظهر بالـ active */
-        position: absolute;
-        top: 60px;
-        right: 15px;
-        background: rgba(0, 0, 0, 0.95); /* خلفية داكنة لضمان وضوح النص */
-        flex-direction: column;
-        width: 220px;
-        padding: 20px;
-        border-radius: 15px;
-        z-index: 1000;
-        align-items: flex-start;
-        gap: 5px;
-        border: 1px solid rgba(255, 255, 255, 0.1);
+      display: none; /* مخفية وتظهر بالـ active */
+      position: absolute;
+      top: 60px;
+      right: 15px;
+      background: rgba(0, 0, 0, 0.95); /* خلفية داكنة لضمان وضوح النص */
+      flex-direction: column;
+      width: 220px;
+      padding: 20px;
+      border-radius: 15px;
+      z-index: 1000;
+      align-items: flex-start;
+      gap: 5px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
     }
 
     .nav-links.active {
-        display: flex; /* تظهر عند الضغط على زر المنيو */
+      display: flex; /* تظهر عند الضغط على زر المنيو */
     }
 
     .nav-links a {
-        width: 100%;
-        margin: 5px 0;
-        padding: 5px 0;
+      width: 100%;
+      margin: 5px 0;
+      padding: 5px 0;
     }
 
     /* 3. حل مشكلة تداخل النصوص (Dropdown) */
     .nav-links .dropdown {
-        width: 100%;
+      width: 100%;
     }
 
     .nav-links .dropdown-content {
-        position: relative; /* هذا يمنع الكلمات من الدخول في بعضها */
-        top: 0;
-        right: 0;
-        width: 100%;
-        background: rgba(255, 255, 255, 0.05); /* تمييز بسيط للقائمة الفرعية */
-        border-radius: 8px;
-        margin-top: 5px;
-        padding-right: 15px; /* إزاحة جهة اليمين */
-        display: none; /* مخفية وتظهر عند الضغط */
-        box-shadow: none;
+      position: relative; /* هذا يمنع الكلمات من الدخول في بعضها */
+      top: 0;
+      right: 0;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.05); /* تمييز بسيط للقائمة الفرعية */
+      border-radius: 8px;
+      margin-top: 5px;
+      padding-right: 15px; /* إزاحة جهة اليمين */
+      display: none; /* مخفية وتظهر عند الضغط */
+      box-shadow: none;
     }
 
     /* إظهار القائمة الفرعية عند الضغط */
     .nav-links .dropdown.active .dropdown-content {
-        display: flex;
-        flex-direction: column;
+      display: flex;
+      flex-direction: column;
     }
 
-
     .menu-icon {
-          display: block;
-        z-index: 1001;
+      display: block;
+      z-index: 1001;
     }
   }
   /* 5. تنسيق الفوتر للموبايل */
- .footer {
-        padding: 40px 20px;
-        text-align: center;
-    }
+  .footer {
+    padding: 40px 20px;
+    text-align: center;
+  }
 
-    .footer-header h2 {
-        text-align: center;
-        margin: 0 0 20px 0;
-    }
+  .footer-header h2 {
+    text-align: center;
+    margin: 0 0 20px 0;
+  }
 
-    .footer-nav {
-        flex-direction: column;
-        align-items: center;
-        gap: 25px; /* مسافة بدل الخطوط الفاصلة */
-    }
+  .footer-nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 25px; /* مسافة بدل الخطوط الفاصلة */
+  }
 
-    .footer-link {
-        flex: 1;
-        text-align: center;
-        border-right: none !important; /* حذف الخط الجانبي */
-        border-bottom: none !important; /* حذف الخط السفلي */
-        padding: 0;
-        width: 100%;
-    }
+  .footer-link {
+    flex: 1;
+    text-align: center;
+    border-right: none !important; /* حذف الخط الجانبي */
+    border-bottom: none !important; /* حذف الخط السفلي */
+    padding: 0;
+    width: 100%;
+  }
 
-    .footer-bottom {
-        border-top: none !important; /* حذف خط الحقوق */
-        margin-top: 20px;
-        padding-top: 0;
-    }
+  .footer-bottom {
+    border-top: none !important; /* حذف خط الحقوق */
+    margin-top: 20px;
+    padding-top: 0;
+  }
 
-/* قائمة الروابط تحت كل عنصر */
-.footer-link ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-.footer-link ul li a {
-  color: #ada8a8;
-  text-decoration: none;
-  display: block;
-  margin: 5px 0;
-  transition: 0.3s;
-}
+  /* قائمة الروابط تحت كل عنصر */
+  .footer-link ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .footer-link ul li a {
+    color: #ada8a8;
+    text-decoration: none;
+    display: block;
+    margin: 5px 0;
+    transition: 0.3s;
+  }
 
-.footer-link ul li a:hover {
-  color: #fff;
-}
+  .footer-link ul li a:hover {
+    color: #fff;
+  }
 
-/* نصوص الفقرة داخل المجموعة */
-.footer-link p {
-  color: #ada8a8;
-  margin: 5px 0;
-}
-
+  /* نصوص الفقرة داخل المجموعة */
+  .footer-link p {
+    color: #ada8a8;
+    margin: 5px 0;
+  }
 }
 @media (max-width: 600px) {
   .cart-card {

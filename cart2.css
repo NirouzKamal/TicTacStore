@@ -19,45 +19,42 @@ body {
 
 /*       Navbar         */
 .navbar {
-display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 97%;
-    padding: 5px 15px;
-    background: transparent;
-    position: absolute; 
-    top: 0;
-    z-index: 1000;
-    direction: rtl; /* لضمان الترتيب العربي */
-    margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 97%;
+  padding: 5px 15px;
+  background: transparent;
+  position: absolute;
+  top: 0;
+  z-index: 1000;
+  direction: rtl; /* لضمان الترتيب العربي */
+  margin-top: 10px;
 }
 
 .nav-right-group {
-    display: flex;
-    align-items: center;
-    gap: 15px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
 
-
-
 .nav-links {
-display: flex;
-    gap: 30px;
-    align-items: center;
+  display: flex;
+  gap: 30px;
+  align-items: center;
 }
 
 .nav-links a {
-text-decoration: none;
-    color: rgba(255,255,255,0.7);
-    font-weight: 600;
-    position: relative;
-    font-size: 14px;
-    transition: 0.3s;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 600;
+  position: relative;
+  font-size: 14px;
+  transition: 0.3s;
 }
 
 .nav-links a:hover {
   color: #ffffff;
-  
 }
 
 .nav-links a::after {
@@ -100,11 +97,11 @@ text-decoration: none;
   width: 30px;
   height: 45px;
   background: radial-gradient(
-        ellipse at top,
-        rgba(255, 179, 71, 0.7),
-        rgba(255, 179, 71, 0.2),
-        transparent 70%
-    );
+    ellipse at top,
+    rgba(255, 179, 71, 0.7),
+    rgba(255, 179, 71, 0.2),
+    transparent 70%
+  );
   opacity: 0;
   filter: blur(4px);
   transition: opacity 0.3s ease;
@@ -149,50 +146,49 @@ text-decoration: none;
 }
 
 .menu-icon {
-    display: none;
-    font-size: 28px;
-    color: white;
-    cursor: pointer;
-    user-select: none;
+  display: none;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+  user-select: none;
 }
 /* Dropdown */
 .nav-links .dropdown {
-    position: relative;
+  position: relative;
 }
 
 .nav-links .dropbtn {
-    cursor: pointer;
-    color: rgba(255,255,255,0.7);
-    font-weight: 600;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 600;
 }
 
 .nav-links .dropdown-content {
-display: none;
-    position: absolute;
-    top: 25px;
-    right: 0;
-    background: rgba(0, 0, 0, 0.8);
-    border-radius: 10px;
-    flex-direction: column;
-    min-width: 150px;
-    overflow: hidden;
+  display: none;
+  position: absolute;
+  top: 25px;
+  right: 0;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+  flex-direction: column;
+  min-width: 150px;
+  overflow: hidden;
 }
 
 .nav-links .dropdown-content a {
-    color: #ccc;
-    padding: 10px 15px;
-    text-decoration: none;
-    display: block;
+  color: #ccc;
+  padding: 10px 15px;
+  text-decoration: none;
+  display: block;
 }
 
 .nav-links .dropdown-content a:hover {
-background: #9e5e2e33; /* خلفية قهوية خفيفة عند الهوفر */
-    color: #fff;
+  background: #9e5e2e33; /* خلفية قهوية خفيفة عند الهوفر */
+  color: #fff;
 }
 .nav-links .dropdown.active .dropdown-content {
-    display: flex;
+  display: flex;
 }
-
 
 .container {
   max-width: 900px;
@@ -308,7 +304,7 @@ h1 {
     FOOTER (صافي وبدون خطوط فواصل)
 ======================================== */
 .footer {
- background: linear-gradient(
+  background: linear-gradient(
     190deg,
     #583c18 0%,
     #6f5534 25%,
@@ -316,76 +312,76 @@ h1 {
     #1c0f00 70%,
     #000000 100%
   );
-    color: #ccc;
-    padding: 60px 20px; /* زيادة المسافة العلوية ليعطي فخامة */
-    width: 100%;
-    box-sizing: border-box;
-    direction: rtl;
-    font-family: 'Times New Roman', Times, serif;
+  color: #ccc;
+  padding: 60px 20px; /* زيادة المسافة العلوية ليعطي فخامة */
+  width: 100%;
+  box-sizing: border-box;
+  direction: rtl;
+  font-family: "Times New Roman", Times, serif;
 }
 
 /* العنوان الكبير للمتجر */
 .footer-header h2 {
-    color: #fff;
-    font-weight: bold;
-    font-size: 28px;
-    margin-bottom: 40px;
-    text-align: right;
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
+  color: #fff;
+  font-weight: bold;
+  font-size: 28px;
+  margin-bottom: 40px;
+  text-align: right;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* توزيع الأعمدة بجانب بعضها */
 .footer-nav {
-    display: flex;
-    justify-content: space-between;
-    gap: 30px;
-    flex-wrap: wrap;
-    max-width: 1200px;
-    margin: 0 auto 40px;
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto 40px;
 }
 
 /* العمود الواحد */
 .footer-link {
-    flex: 1;
-    min-width: 150px; /* لضمان عدم صغر العمود جداً */
-    text-align: right;
+  flex: 1;
+  min-width: 150px; /* لضمان عدم صغر العمود جداً */
+  text-align: right;
 }
 
 .footer-link h3 {
-    color: #fff;
-    font-weight: bold;
-    font-size: 17px;
-    margin-bottom: 20px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 17px;
+  margin-bottom: 20px;
 }
 
 .footer-link ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .footer-link ul li a {
-    color: #ada8a8;
-    text-decoration: none;
-    display: block;
-    margin: 10px 0;
-    transition: 0.3s ease;
-    font-size: 15px;
+  color: #ada8a8;
+  text-decoration: none;
+  display: block;
+  margin: 10px 0;
+  transition: 0.3s ease;
+  font-size: 15px;
 }
 
 .footer-link ul li a:hover {
-    color: #fff;
-    transform: translateX(-5px); /* حركة بسيطة لليمين بدل الخط */
+  color: #fff;
+  transform: translateX(-5px); /* حركة بسيطة لليمين بدل الخط */
 }
 
 /* الحقوق في الأسفل */
 .footer-bottom {
-    text-align: center;
-    padding-top: 30px;
-    font-size: 13px;
-    color: rgba(255, 255, 255, 0.4);
+  text-align: center;
+  padding-top: 30px;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.4);
 }
 /* Responsive */
 
@@ -396,156 +392,156 @@ h1 {
 }
 
 @media (max-width: 768px) {
- 
-.menu-icon {
-        display: block; /* يظهر */
-    }
-
-.nav-links {
-        display: none; /* يختفي على الموبايل */
-        position: absolute;
-        top: 55px;
-        right: 0;
-        background: rgba(0,0,0,0.95);
-        border-radius: 10px;
-        width: 200px;
-        z-index: 1000;
-        flex-direction: column;
-        align-items: flex-start; /* محاذاة النص لليمين */
-        padding: 20px;
-        height: auto; /* تجعل الارتفاع يتحدد حسب المحتوى */
-        gap: 10px; /* مسافة بين الروابط الرئيسية */
-}
-.nav-links.active {
-        display: flex; /* تظهر عند الضغط */
-    }
-    .nav-links a {
-            margin: 10px 0;
-
-    }
-        /* Dropdown على الموبايل عند الضغط */
-.nav-links .dropdown-content {
-position: relative; /* هذا هو السر: يلغي تداخل العناصر ويجعلها تدفع ما تحتها */
-        top: 0;
-        width: 100%;
-        background: rgba(255, 255, 255, 0.05); /* خلفية مميزة قليلاً */
-        box-shadow: none;
-        padding-right: 15px; /* إزاحة بسيطة لليمين لتبدو كقائمة فرعية */
-        margin-top: 5px;
-        display: none; /* تختفي وتظهر عند الضغط */
+  .menu-icon {
+    display: block; /* يظهر */
   }
 
-.nav-links .dropdown.active .dropdown-content {
-      display: flex;
-      flex-direction: column;
+  .nav-links {
+    display: none; /* يختفي على الموبايل */
+    position: absolute;
+    top: 55px;
+    right: 0;
+    background: rgba(0, 0, 0, 0.95);
+    border-radius: 10px;
+    width: 200px;
+    z-index: 1000;
+    flex-direction: column;
+    align-items: flex-start; /* محاذاة النص لليمين */
+    padding: 20px;
+    height: auto; /* تجعل الارتفاع يتحدد حسب المحتوى */
+    gap: 10px; /* مسافة بين الروابط الرئيسية */
+  }
+  .nav-links.active {
+    display: flex; /* تظهر عند الضغط */
+  }
+  .nav-links a {
+    margin: 10px 0;
+  }
+  /* Dropdown على الموبايل عند الضغط */
+  .nav-links .dropdown-content {
+    position: relative; /* هذا هو السر: يلغي تداخل العناصر ويجعلها تدفع ما تحتها */
+    top: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.05); /* خلفية مميزة قليلاً */
+    box-shadow: none;
+    padding-right: 15px; /* إزاحة بسيطة لليمين لتبدو كقائمة فرعية */
+    margin-top: 5px;
+    display: none; /* تختفي وتظهر عند الضغط */
   }
 
-    .icon-group {
-      gap: 10px; /* تقليل المسافة بين الأيقونات */
-    }
+  .nav-links .dropdown.active .dropdown-content {
+    display: flex;
+    flex-direction: column;
+  }
 
-    .icon-item {
-      font-size: 18px; /* تصغير الأيقونات */
-    }
+  .icon-group {
+    gap: 10px; /* تقليل المسافة بين الأيقونات */
+  }
 
-    .badge {
-      font-size: 9px;
-      width: 14px;
-      height: 14px;
-      top: -8px;
-      right: -8px;
-    }
+  .icon-item {
+    font-size: 18px; /* تصغير الأيقونات */
+  }
 
-    .logo {
-      font-size: 18px; /* تصغير اللوجو */
-    }
+  .badge {
+    font-size: 9px;
+    width: 14px;
+    height: 14px;
+    top: -8px;
+    right: -8px;
+  }
 
-    .menu-icon {
-      padding-left: 10px;
-      font-size: 15px;
-    }
-/* ========================================
+  .logo {
+    font-size: 18px; /* تصغير اللوجو */
+  }
+
+  .menu-icon {
+    padding-left: 10px;
+    font-size: 15px;
+  }
+  /* ========================================
    FOOTER MOBILE - BROWN THEME
 ======================================== */
-.footer {
+  .footer {
     /* الخلفية القهوية المتدرجة */
-    background: linear-gradient(190deg, 
-        rgba(70, 63, 58, 0.95), 
-        rgba(43, 22, 8, 0.98)); 
+    background: linear-gradient(
+      190deg,
+      rgba(70, 63, 58, 0.95),
+      rgba(43, 22, 8, 0.98)
+    );
     padding: 40px 20px;
     text-align: center;
     width: 100%;
     box-sizing: border-box;
-}
+  }
 
-.footer-header h2 {
+  .footer-header h2 {
     color: #ffd186; /* لون ذهبي هادئ */
     font-weight: bold;
     font-size: 26px;
     margin: 0 0 30px 0;
     text-align: center; /* توسيط في الموبايل */
-}
+  }
 
-.footer-nav {
+  .footer-nav {
     display: flex;
     flex-direction: column; /* ترتيب عمودي */
     align-items: center;
     gap: 30px; /* مسافة كافية بدل الخطوط */
-}
+  }
 
-.footer-link {
+  .footer-link {
     flex: 1;
     text-align: center;
     border-right: none !important; /* إزالة أي فواصل جانبية */
     border-bottom: none !important; /* إزالة أي فواصل سفلية */
     padding: 0;
     width: 100%;
-}
+  }
 
-.footer-link h3 {
+  .footer-link h3 {
     color: #fff;
     font-weight: bold;
     font-size: 17px;
     margin-bottom: 12px;
-}
+  }
 
-/* قائمة الروابط */
-.footer-link ul {
+  /* قائمة الروابط */
+  .footer-link ul {
     list-style: none;
     padding: 0;
     margin: 0;
-}
+  }
 
-.footer-link ul li a {
+  .footer-link ul li a {
     color: #ada8a8;
     text-decoration: none;
     display: block;
     margin: 8px 0;
     transition: 0.3s;
     font-size: 15px;
-}
+  }
 
-.footer-link ul li a:hover {
+  .footer-link ul li a:hover {
     color: #ffd186; /* تغيير اللون للذهبي عند التمرير */
     transform: translateY(-2px);
-}
+  }
 
-/* نصوص الفقرة (مثل العنوان أو الإيميل) */
-.footer-link p {
+  /* نصوص الفقرة (مثل العنوان أو الإيميل) */
+  .footer-link p {
     color: #ada8a8;
     margin: 5px 0;
     font-size: 14px;
-}
+  }
 
-/* الجزء السفلي (الحقوق) */
-.footer-bottom {
+  /* الجزء السفلي (الحقوق) */
+  .footer-bottom {
     border-top: none !important; /* إزالة خط الحقوق */
     margin-top: 30px;
     padding-top: 0;
     text-align: center;
     font-size: 12px;
     color: rgba(255, 255, 255, 0.3);
-}
+  }
 }
 
 @media (max-width: 600px) {
